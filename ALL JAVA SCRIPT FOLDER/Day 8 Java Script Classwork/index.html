@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Name Generator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  #generator {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  #generated-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div id="generator">
+  <h1>Name Generator</h1>
+  <p>Click the button to generate a random name:</p>
+  <p id="generated-name"></p>
+  <button id="generate-button">Generate Name</button>
+  <button onclick="reset()">Reset</button>
+</div>
+<script>
+  const names = [
+    "John",
+    "Jane",
+    "Chizurum",
+    "Noble",
+    "William",
+    "Eromosele",
+    "James",
+    "Destiny",
+    "Robert",
+    "Kamsi",
+    "David",
+    "Mia",
+    "Joseph",
+    "Isabella"
+  ];
+  
+
+  const generatedNameElement = document.getElementById("generated-name");
+  const generateButton = document.getElementById("generate-button");
+  
+ 
+
+  generateButton.addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * names.length);
+    const randomName = names[randomIndex];
+    generatedNameElement.textContent = randomName;
+    
+  });
+  function reset() {
+    generatedNameElement.textContent = ''
+  }
+  
+
+
+
+ 
+
+
+</script>
+</body>
+</html>
